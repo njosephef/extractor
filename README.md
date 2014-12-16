@@ -41,7 +41,7 @@ To use goose from the command line:
     cd into the goose directory
     mvn compile
     MAVEN_OPTS="-Xms256m -Xmx2000m"; mvn exec:java -Dexec.mainClass=com.gravity.goose.TalkToMeGoose -Dexec.args="http://techcrunch.com/2011/05/13/native-apps-or-web-apps-particle-code-wants-you-to-do-both/" -e -q > ~/Desktop/gooseresult.txt
-
+     mvn exec:java -Dexec.mainClass=com.gravity.goose.TalkToMeGoose -Dexec.args="http://engineering.ooyala.com/blog/comparing-scala-json-libraries"
 
 ##Regarding the port from JAVA to Scala
 

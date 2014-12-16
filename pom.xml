@@ -10,6 +10,7 @@
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <scala.version>2.10.4</scala.version>
   </properties>
 
   <dependencies>
@@ -59,6 +60,16 @@
       <groupId>com.typesafe.akka</groupId>
       <artifactId>akka-actor_2.10</artifactId>
       <version>2.3.7</version>
+    </dependency>
+    <dependency>
+      <groupId>org.json4s</groupId>
+      <artifactId>json4s-native_2.10</artifactId>
+      <version>3.2.11</version>
+    </dependency>
+    <dependency>
+      <groupId>org.json4s</groupId>
+      <artifactId>json4s-jackson_2.10</artifactId>
+      <version>3.2.11</version>
     </dependency>
     <dependency>
       <groupId>org.apache.httpcomponents</groupId>
