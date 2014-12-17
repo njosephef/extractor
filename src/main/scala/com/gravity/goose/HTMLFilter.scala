@@ -28,6 +28,16 @@ object HTMLFilter {
 
   def main(args: Array[String]) {
     try {
+
+      implicit val formats = Serialization.formats(
+        ShortTypeHints(
+          List(
+            classOf[TextContent],
+            classOf[HTMLContent]
+          )
+        )
+      )
+
       val fileName: String = args(0)
       val str = FileUtils readFileToString (new File(fileName), "UTF-8")
       val json = parse(str)
@@ -38,14 +48,6 @@ object HTMLFilter {
       val filter = new Filter(config)
       val article = filter.filter(htmlContent.url, htmlContent.html);
       println(article.cleanedArticleText)
-
-      implicit val formats = Serialization.formats(
-        ShortTypeHints(
-          List(
-            classOf[TextContent]
-          )
-        )
-      )
 
       val textContent = new TextContent(htmlContent.url, article.cleanedArticleText)
 //      val json = Serialization.write(textContent)
